@@ -33,6 +33,10 @@ namespace CreateOrderForZNP
             #region ParametersForDebug
             args = new string[4];
 
+            //args[0] = "DmitrievaUV";
+            //args[1] = "DmitrievaUV8798";
+            //args[2] = "clon";
+
             args[0] = "EasZakTov";
             args[1] = "ddfi3)es";
             args[2] = "clon";
@@ -99,17 +103,21 @@ namespace CreateOrderForZNP
                            
                             string response = wse.rc_createorderbuyZNP(User.CurrentUserId);
 
-                             
+
                             /* 
                              <idrowzkp/> - код позиции ЗКП
                              <kol/> - кол-во
                              <price/> - цена
                              */
                             //MessageBox.Show(response.ToString());
+                            GC.Collect();
+                            Process.GetCurrentProcess().Kill();
+                            Application.Exit();
+
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
                             Process.GetCurrentProcess().Kill();
                             Application.Exit();
                         }

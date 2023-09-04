@@ -41,7 +41,7 @@ public partial class ws_online5clonService : System.Web.Services.Protocols.SoapH
 
     private System.Threading.SendOrPostCallback rc_createorderbuyzkptovOperationCompleted;
 
-    private System.Threading.SendOrPostCallback rc_createorderbuyZnpEndWaitOperationCompleted;
+    private System.Threading.SendOrPostCallback rc_createorderbuyznpendwaitOperationCompleted;
 
    
 
@@ -109,7 +109,7 @@ public partial class ws_online5clonService : System.Web.Services.Protocols.SoapH
   
 
     /// <remarks/>
-    public event rc_createorderbuyZnpEndWaitCompletedEventHandler rc_createorderbuyZnpEndWaitCompleted;
+    public event rc_createorderbuyznpendwaitCompletedEventHandler rc_createorderbuyznpendwaitCompleted;
 
     /// <remarks/>
     public event rc_createorderbuyzkptovCompletedEventHandler rc_createorderbuyzkptovCompleted;
@@ -484,60 +484,60 @@ public partial class ws_online5clonService : System.Web.Services.Protocols.SoapH
 
     /// <remarks/>
     [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace = "http://easkis5clon", ResponseNamespace = "http://easkis5clon")]
-    [return: System.Xml.Serialization.SoapElementAttribute("rc_createorderbuyZnpEndWaitReturn")]
-    public string rc_createorderbuyZnpEndWait(string in0) { 
-        object[] results = this.Invoke("rc_createorderbuyZnpEndWait", new object[] {
+    [return: System.Xml.Serialization.SoapElementAttribute("rc_createorderbuyznpendwaitReturn")]
+    public string rc_createorderbuyznpendwait(string in0) {
+        object[] results = this.Invoke("rc_createorderbuyznpendwait", new object[] {
                     in0
                     });
         return ((string)(results[0]));
     }
 
     /// <remarks/>
-    public System.IAsyncResult Beginrc_createorderbuyZnpEndWait(string in0, System.AsyncCallback callback, object asyncState)
+    public System.IAsyncResult Beginrc_createorderbuyznpendwait(string in0, System.AsyncCallback callback, object asyncState)
     {
-        return this.BeginInvoke("rc_createorderbuyZnpEndWait", new object[] {
+        return this.BeginInvoke("rc_createorderbuyznpendwait", new object[] {
                     in0}, callback, asyncState);
     }
 
     /// <remarks/>
-    public string Endrc_createorderbuyZnpEndWait(System.IAsyncResult asyncResult)
+    public string Endrc_createorderbuyznpendwait(System.IAsyncResult asyncResult)
     {
         object[] results = this.EndInvoke(asyncResult);
         return ((string)(results[0]));
     }
 
     /// <remarks/>
-    public void rc_createorderbuyZnpEndWaitAsync(string in0)
+    public void rc_createorderbuyznpendwaitAsync(string in0)
     {
-        this.rc_createorderbuyZnpEndWaitAsync(in0 ,null);
+        this.rc_createorderbuyznpendwaitAsync(in0);
     }
 
     /// <remarks/>
-    public void rc_createorderbuyZnpEndWaitAsync(string in0,  object userState)
+    public void rc_createorderbuyznpendwaittAsync(string in0,  object userState)
     {
-        if ((this.rc_createorderbuyZnpEndWaitOperationCompleted == null))
+        if ((this.rc_createorderbuyznpendwaitOperationCompleted == null))
         {
-            this.rc_createorderbuyZnpEndWaitOperationCompleted = new System.Threading.SendOrPostCallback(this.Onrc_createorderbuyZnpEndWaitOperationCompleted);
+            this.rc_createorderbuyznpendwaitOperationCompleted = new System.Threading.SendOrPostCallback(this.Onrc_createorderbuyznpendwaitOperationCompleted);
         }
-        this.InvokeAsync("rc_createorderbuyZnpEndWait", new object[] {
+        this.InvokeAsync("rc_createorderbuyznpendwait", new object[] {
                     in0,
-                    }, this.rc_createorderbuyZnpEndWaitOperationCompleted, userState);
+                    }, this.rc_createorderbuyznpendwaitOperationCompleted, userState);
     }
 
-    private void Onrc_createorderbuyZnpEndWaitOperationCompleted(object arg)
+    private void Onrc_createorderbuyznpendwaitOperationCompleted(object arg)
     {
-        if ((this.rc_createorderbuyZnpEndWaitCompleted != null))
+        if ((this.rc_createorderbuyznpendwaitCompleted != null))
         {
             System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-            this.rc_createorderbuyZnpEndWaitCompleted(this, new rc_createorderbuyZnpEndWaitCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            this.rc_createorderbuyznpendwaitCompleted(this, new rc_createorderbuyznpendwaitCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
         }
     }
 
-    /// <remarks/>
-    //public new void CancelAsync(object userState)
-    //{
-    //    base.CancelAsync(userState);
-    //}
+    // <remarks/>
+    public new void CancelAsync(object userState)
+    {
+        base.CancelAsync(userState);
+    }
 
 
 
@@ -676,18 +676,18 @@ public partial class rc_createorderbuyzkptovCompletedEventArgs : System.Componen
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "2.0.50727.3038")]
-public delegate void rc_createorderbuyZnpEndWaitCompletedEventHandler(object sender, rc_createorderbuyZnpEndWaitCompletedEventArgs e);
+public delegate void rc_createorderbuyznpendwaitCompletedEventHandler(object sender, rc_createorderbuyznpendwaitCompletedEventArgs e);
 
 /// <remarks/>
 [System.CodeDom.Compiler.GeneratedCodeAttribute("wsdl", "2.0.50727.3038")]
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
-public partial class rc_createorderbuyZnpEndWaitCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+public partial class rc_createorderbuyznpendwaitCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
 {
 
     private object[] results;
 
-    internal rc_createorderbuyZnpEndWaitCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+    internal rc_createorderbuyznpendwaitCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
             base(exception, cancelled, userState)
     {
         this.results = results;

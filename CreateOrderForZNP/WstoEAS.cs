@@ -389,11 +389,12 @@ namespace CreateOrderForZNP
 
                         //s = GetData().ToString();
                         //s = ws_eas_clon.rc_checkwork().ToString();
-                       s = ws_eas_clon.rc_createorderbuyZnpEndWait(xmlauth).ToString(); //rc_createorderbuyzkptov rc_createorderbuyZNP
-                    Console.WriteLine(s);
-                       // s = ws_eas_clon.rc_checkwork().ToString();
-                        //s = ws_eas_clon.rc_createorderbuyzkptov(xmlauth, xmlrequest).ToString();
-                        //s = ws_eas_clon.rc_reservtovdoc(xmlauth, xmlrequest).ToString();
+                       s = ws_eas_clon.rc_createorderbuyznpendwait(xmlauth).ToString(); //rc_createorderbuyzkptov rc_createorderbuyZNP
+                                                                                        //MessageBox.Show(s);
+                                                                                        // s = ws_eas_clon.rc_checkwork().ToString();
+                                                                                        //s = ws_eas_clon.rc_createorderbuyzkptov(xmlauth, xmlrequest).ToString();
+                                                                                        //s = ws_eas_clon.rc_reservtovdoc(xmlauth, xmlrequest).ToString();
+                    UniLogger.WriteLog("", 0, $"Метод rc_createorderbuyznpendwait успешно выполнился: + {s}");
                 }
 
                     return GetValue(s);
@@ -402,7 +403,7 @@ namespace CreateOrderForZNP
                 {
 
                     string exa = ex.Message.ToString() + ex.StackTrace;
-                    UniLogger.WriteLog("", 1, $"Ошибка метода rc_createorderbuyzkptov: {ex.Message} \r\n {xmlauth} \r\n {xmlrequest} \r\n {s}");
+                    UniLogger.WriteLog("", 1, $"Ошибка метода rc_createorderbuyznpendwait: {ex.Message} \r\n {xmlauth} \r\n {xmlrequest} \r\n {s}");
                     GC.Collect();
                     Process.GetCurrentProcess().Kill();
                     Application.Exit();
