@@ -387,9 +387,10 @@ namespace CreateOrderForZNP
                     else
                     {
 
-                        s = GetData().ToString();
+                        //s = GetData().ToString();
                         //s = ws_eas_clon.rc_checkwork().ToString();
                        s = ws_eas_clon.rc_createorderbuyZnpEndWait(xmlauth).ToString(); //rc_createorderbuyzkptov rc_createorderbuyZNP
+                    Console.WriteLine(s);
                        // s = ws_eas_clon.rc_checkwork().ToString();
                         //s = ws_eas_clon.rc_createorderbuyzkptov(xmlauth, xmlrequest).ToString();
                         //s = ws_eas_clon.rc_reservtovdoc(xmlauth, xmlrequest).ToString();

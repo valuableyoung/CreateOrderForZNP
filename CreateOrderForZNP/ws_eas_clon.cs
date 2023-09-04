@@ -509,7 +509,7 @@ public partial class ws_online5clonService : System.Web.Services.Protocols.SoapH
     /// <remarks/>
     public void rc_createorderbuyZnpEndWaitAsync(string in0)
     {
-        this.rc_createorderbuyZnpEndWaitAsync(in0);
+        this.rc_createorderbuyZnpEndWaitAsync(in0 ,null);
     }
 
     /// <remarks/>
@@ -534,10 +534,10 @@ public partial class ws_online5clonService : System.Web.Services.Protocols.SoapH
     }
 
     /// <remarks/>
-    public new void CancelAsync(object userState)
-    {
-        base.CancelAsync(userState);
-    }
+    //public new void CancelAsync(object userState)
+    //{
+    //    base.CancelAsync(userState);
+    //}
 
 
 
@@ -709,7 +709,7 @@ public partial class rc_createorderbuyZnpEndWaitCompletedEventArgs : System.Comp
     {
         var url = @"https://arkona36.ru/eolite/settings/eas_server.eas";
         //var result = GetActiveEAS(url);
-        var data = GetActiveEAS(url);
+        var data = GetActiveEAS(url);         
         return data.Result;
     }
 
@@ -722,7 +722,7 @@ public partial class rc_createorderbuyZnpEndWaitCompletedEventArgs : System.Comp
 
             var content = await client.GetStringAsync(url);
 
-            //Console.WriteLine(content);
+            Console.WriteLine(content);
             return content;
 
         }
