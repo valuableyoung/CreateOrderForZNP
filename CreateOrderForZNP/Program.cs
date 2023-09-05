@@ -110,6 +110,7 @@ namespace CreateOrderForZNP
                         catch (Exception ex)
                         {
                             //MessageBox.Show(ex.Message);
+                            UniLogger.WriteLog("", 3, ex.Message);
                             Process.GetCurrentProcess().Kill();
                             Application.Exit();
                         }
@@ -121,17 +122,19 @@ namespace CreateOrderForZNP
                         }
                         else
                         {
-                            MessageBox.Show("Недостаточно прав доступа для запуска!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            //MessageBox.Show("Недостаточно прав доступа для запуска!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            UniLogger.WriteLog("", 3, "Недостаточно прав доступа для запуска!");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Пользователь с таким логином или паролем не найден!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // MessageBox.Show("Пользователь с таким логином или паролем не найден!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        UniLogger.WriteLog("", 3, "Пользователь с таким логином или паролем не найден!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
                     UniLogger.WriteLog("", 3, ex.Message);
 
                 }
@@ -139,7 +142,8 @@ namespace CreateOrderForZNP
             }
             else
             {
-                MessageBox.Show("Неверные параметры запуска приложения!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Неверные параметры запуска приложения!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UniLogger.WriteLog("", 3, "Неверные параметры запуска приложения!");
             }
 
             GC.Collect();
