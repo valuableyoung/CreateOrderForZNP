@@ -39,7 +39,7 @@ namespace CreateOrderForZNP
 
             args[0] = "EasZakTov";
             args[1] = "ddfi3)es";
-            args[2] = "clon";
+            args[2] = "real";
             #endregion
 
             Application.EnableVisualStyles();
@@ -65,10 +65,7 @@ namespace CreateOrderForZNP
                     {
                         srvname = @"DBSRV\DBSRV";
                         conn_string = $@"Server={srvname};Database={arg3};Integrated Security=SSPI;Connect Timeout=600";
-                        //MailSettings.email = "dorogovtsevvv@arkona36.ru";
-                        //MailSettings.password = "SZmsoRE6";
-                        //MailSettings.email = "DmitrievaUV@arkona36.ru";
-                        //MailSettings.password = "DmI2020";
+ 
                         MailSettings.email = "commerceoffer@arkona36.ru";
                         MailSettings.password = "Ghtlkju01)";
 
@@ -104,12 +101,7 @@ namespace CreateOrderForZNP
                             string response = wse.rc_createorderbuyZNP(User.CurrentUserId);
 
 
-                            /* 
-                             <idrowzkp/> - код позиции ЗКП
-                             <kol/> - кол-во
-                             <price/> - цена
-                             */
-                            //MessageBox.Show(response.ToString());
+ 
                             GC.Collect();
                             Process.GetCurrentProcess().Kill();
                             Application.Exit();
